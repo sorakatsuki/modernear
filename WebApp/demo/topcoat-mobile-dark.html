@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<?php
+      $bg = array("../img/korea_3.jpg", "../img/sf_1.jpg", "../img/sydney_1.jpg", "../img/london_1.jpg" ); // array of filenames
+
+      $i = rand(0, count($bg)-1); // generate random number size of the array
+      $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+    ?>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The personalized tour guide ::: moderNEAR</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/topcoat-mobile-dark.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/brackets.css"><!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="jquery-2.0.3-min.js"></script>
+
+    <script type='text/javascript'>
+
+        function randomPic()    {
+            var randombgs=['#0d1424 no-repeat url(../img/korea_3.jpg) center top', '#0d1424 no-repeat url(../img/sf_1.jpg) center top', '#0d1424 no-repeat url(../img/sydney_1.jpg) center top', '#0d1424 no-repeat url(../img/london_1.jpg) center top' ];
+
+            $('#content').css('background', randombgs[Math.floor(Math.random()*randombgs.length)]);
+
+            return randombgs[Math.floor(Math.random()*randombgs.length)];
+        }
+
+        function makeStr(strTmp)    {
+            var varStr="http://speechutil.com/convert/ogg?text='";
+            varStr = varStr.concat(strTmp);
+            varStr = varStr.concat("'");
+
+            return varStr;
+        }
+
+        //document.getElementById('content').background= randomPic();
+        $('#content').css('background', randomPic());
+
+    </script>
+
+
+
+  </head>
+
+  <body class="dark">
+
+
+
+
+       <div id="wrapper">
+      <div class="max-width">
+        <div id="sideNav">
+          <nav class="site">
+            <ul>
+                <li><a href="topcoat-mobile-dark.html">Home</a></li>
+                <li class="selected"><a href="about.html">About</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+            </ul>
+          </nav>
+
+
+
+          <div id="pageNav">
+              <section class="component"><label class="topcoat-checkbox">
+                  <input type="checkbox">Fashion
+                  <div class="topcoat-checkbox__checkmark"></div></label><br>
+              </section>
+              <section class="component"><label class="topcoat-checkbox">
+                  <input type="checkbox">Food
+                  <div class="topcoat-checkbox__checkmark"></div></label><br>
+              </section>
+              <section class="component"><label class="topcoat-checkbox">
+                  <input type="checkbox">View
+                  <div class="topcoat-checkbox__checkmark"></div></label><br>
+              </section>
+              <section class="component"><label class="topcoat-checkbox">
+                  <input type="checkbox">Date
+                  <div class="topcoat-checkbox__checkmark"></div></label><br>
+              </section>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="site">
+
+
+        <header id="main-header">
+          <div class="max-width">
+            <hgroup>
+              <a><img src="../img/logo_black.png"></a>
+              <p>The personalized tour guide</p>
+            </hgroup>
+            <nav>
+              <ul>
+                <li class="selected"><a href="about.html">About</a></li>
+                <li><a href="http://bench.topcoat.io/">Interests</a></li>
+                <li><a href="signup.html">Sign in</a></li>
+                <li><a id="download-btn" href="https://github.com/topcoat/topcoat/archive/v0.8.0.zip" onclick="_gaq.push(['_trackEvent', 'download', 'click',,, false]);">Download</a></li>
+              </ul>
+            </nav><a id="slide-menu-button" class="topcoat-icon-button--large--quiet"><span class="topcoat-icon--large topcoat-icon--menu-stack"></span></a>
+          </div>
+        </header>
+
+
+
+        <div id="content" class="max-width">
+ 
+          <div id="main_txt">Start your exciting trip</div>
+
+          <button class="topcoat-button--large" ><a href="googlemap.html">Let's go</a></button>
+
+
+
+
+
+
+        </div>
+        <footer></footer>
+      </div>
+    </div>
+
+    <!--TTS park
+    How to use : putting proper string to makeStr() as parameter 
+     -->
+   <!--
+    <video controls autoplay name="media" height="0">
+        <source src="makeStr()" type="audio/ogg">
+    </video>
+       -->
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
